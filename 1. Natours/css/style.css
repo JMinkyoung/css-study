@@ -50,6 +50,7 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary {
@@ -57,6 +58,7 @@ body {
     text-transform: uppercase;
     /* 애니메이션 중에 흔들리는거 막기 위해서 넣음 */
     backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -110,4 +112,31 @@ body {
         opacity: 1;
         transform: translate(0);
     }
+}
+
+/* 요소에 특수한 상황일때를 선택하기 위해 :어쩌구 사용 */
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    /* 부모 요소에 transition 넣는다는 점 */
+    transition: all .2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
 }
